@@ -1,0 +1,16 @@
+<label
+  >Search Products
+  <input
+    id="search"
+    name="search"
+    class="search"
+    type="search"
+    autoFocus="true"
+    #srch_input
+    (input)="triggerSearch(srch_input.value)"
+  />
+</label>
+
+<select id="selectResults" class="selectResults" >
+  <option *ngFor="let item of resultsList" value="item.cost">{{item.product}}</option>
+</select>
