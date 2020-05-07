@@ -11,6 +11,6 @@
   />
 </label>
 
-<select id="selectResults" class="selectResults" >
-  <option *ngFor="let item of resultsList" value="item.cost">{{item.product}}</option>
+<select id="selectResults" #selectedItem class="selectResults" (input)="selectItem(selectedItem.value)">
+  <option *ngFor="let item of resultsList" [value]="item.cost">{{item.product}}</option>
 </select>
