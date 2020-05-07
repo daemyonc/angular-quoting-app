@@ -4,15 +4,15 @@
 
 <main>
   <div class="search">
-    <search-cmp></search-cmp>
+    <search-cmp (selectItemEvent)="calculateResults($event)"></search-cmp>
   </div>
-  <select class="decoMethod" >
+  <select class="decoMethod" #decoMeth (click)="calculateResults(itemCost,decoMeth.value,qty.value)" >
     <option value="SP">Screen Print</option>
     <option value="EMB">Embroidery</option>
   </select>
 
-  <select class="selectQty" >
-    <option value="1" selected>Select quantity</option>
+  <select class="selectQty" #qty (click)="calculateResults(itemCost,decoMeth.value,qty.value)" >
+    <option value="12" selected>Select quantity</option>
     <option value="1">1</option>
     <option value="12">12</option>
     <option value="24">24</option>
@@ -25,6 +25,6 @@
   </select>
 
   <div class="quoteResults">
-    <results-cmp></results-cmp>
+    <results-cmp [itemCost]="itemCost" [blankCost]="blankCost" [decoPrice]="decoPrice"></results-cmp>
   </div>
 </main>
