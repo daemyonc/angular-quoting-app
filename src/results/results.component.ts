@@ -2,7 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'results-cmp',
-    templateUrl: './results.component.html'
+    templateUrl: './results.component.html',
+    styleUrls: ['./results.component.scss']
 })
 
 export class ResultsComponent {

@@ -1,9 +1,5 @@
-<header>
-  <h1>Angular Quoting App</h1>
-</header>
-
 <main>
-  <div class="search">
+  <div class="header">
     <search-cmp (selectItemEvent)="calculateResults($event)"></search-cmp>
   </div>
   <select class="decoMethod" #decoMeth (click)="calculateResults(itemCost,decoMeth.value,qty.value)" >
@@ -24,7 +20,7 @@
     <option value="1000">1,000</option>
   </select>
 
-  <div class="quoteResults">
-    <results-cmp [itemCost]="itemCost" [blankCost]="blankCost" [decoPrice]="decoPrice"></results-cmp>
+  <div>
+    <results-cmp class="quoteResults" [itemCost]="itemCost" [blankCost]="blankCost" [decoPrice]="decoPrice"></results-cmp>
   </div>
 </main>
