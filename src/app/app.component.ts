@@ -23,6 +23,5 @@ export class AppComponent {
     this.itemCost = cost;
     this.blankCost = parseFloat((cost / .79).toFixed(2));
     this.decoPrice = parseFloat((this.blankCost + decoPricing[deco][qty]).toFixed(2));
-    console.log(cost,deco,qty);
   }
  }
