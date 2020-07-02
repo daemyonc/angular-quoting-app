@@ -85,6 +85,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.decoMeth = 'SP';
         this.qty = 12;
+        this.itemCost = 1.95;
+        this.calculateResults(this.itemCost, this.decoMeth, this.qty);
       }
 
       _createClass(AppComponent, [{
@@ -110,7 +112,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       selectors: [["app-root"]],
       decls: 33,
       vars: 3,
-      consts: [[1, "header"], [3, "selectItemEvent"], [1, "decoMethod", 3, "click"], ["decoMeth", ""], ["value", "SP"], ["value", "EMB"], [1, "selectQty", 3, "click"], ["qty", ""], ["value", "12", "selected", ""], ["value", "1"], ["value", "12"], ["value", "24"], ["value", "48"], ["value", "72"], ["value", "144"], ["value", "288"], ["value", "500"], ["value", "1000"], [1, "quoteResults", 3, "itemCost", "blankCost", "decoPrice"]],
+      consts: [[1, "header"], [3, "selectItemEvent"], [1, "decoMethod", 3, "click"], ["decoMeth", ""], ["value", "SP"], ["value", "EMB"], [1, "selectQty", 3, "input"], ["qty", ""], ["value", "12", "selected", ""], ["value", "1"], ["value", "12"], ["value", "24"], ["value", "48"], ["value", "72"], ["value", "144"], ["value", "288"], ["value", "500"], ["value", "1000"], [1, "quoteResults", 3, "itemCost", "blankCost", "decoPrice"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
           var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
@@ -157,7 +159,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "select", 6, 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_select_click_9_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("input", function AppComponent_Template_select_input_9_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2);
 
             var _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](4);
@@ -1809,7 +1811,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       },
       decls: 7,
       vars: 1,
-      consts: [["id", "search", "name", "search", "type", "search", "autoFocus", "true", 1, "search", 3, "input"], ["srch_input", ""], ["id", "selectResults", 1, "selectResults", 3, "input"], ["selectedItem", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
+      consts: [["id", "search", "name", "search", "type", "search", "autoFocus", "true", "value", "5000", 1, "search", 3, "input", "focus"], ["srch_input", ""], ["id", "selectResults", 1, "selectResults", 3, "input"], ["selectedItem", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
       template: function SearchComponent_Template(rf, ctx) {
         if (rf & 1) {
           var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
@@ -1821,6 +1823,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "input", 0, 1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("input", function SearchComponent_Template_input_input_2_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7);
+
+            var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+
+            return ctx.triggerSearch(_r3.value);
+          })("focus", function SearchComponent_Template_input_focus_2_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7);
 
             var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);

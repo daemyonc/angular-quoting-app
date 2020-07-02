@@ -46,6 +46,8 @@ class AppComponent {
     constructor() {
         this.decoMeth = 'SP';
         this.qty = 12;
+        this.itemCost = 1.95;
+        this.calculateResults(this.itemCost, this.decoMeth, this.qty);
     }
     calculateResults(cost, deco = 'SP', qty = 12) {
         this.itemCost = cost;
@@ -54,7 +56,7 @@ class AppComponent {
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 33, vars: 3, consts: [[1, "header"], [3, "selectItemEvent"], [1, "decoMethod", 3, "click"], ["decoMeth", ""], ["value", "SP"], ["value", "EMB"], [1, "selectQty", 3, "click"], ["qty", ""], ["value", "12", "selected", ""], ["value", "1"], ["value", "12"], ["value", "24"], ["value", "48"], ["value", "72"], ["value", "144"], ["value", "288"], ["value", "500"], ["value", "1000"], [1, "quoteResults", 3, "itemCost", "blankCost", "decoPrice"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 33, vars: 3, consts: [[1, "header"], [3, "selectItemEvent"], [1, "decoMethod", 3, "click"], ["decoMeth", ""], ["value", "SP"], ["value", "EMB"], [1, "selectQty", 3, "input"], ["qty", ""], ["value", "12", "selected", ""], ["value", "1"], ["value", "12"], ["value", "24"], ["value", "48"], ["value", "72"], ["value", "144"], ["value", "288"], ["value", "500"], ["value", "1000"], [1, "quoteResults", 3, "itemCost", "blankCost", "decoPrice"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         const _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "main");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
@@ -72,7 +74,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "select", 6, 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_select_click_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](4); const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](10); return ctx.calculateResults(ctx.itemCost, _r0.value, _r1.value); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("input", function AppComponent_Template_select_input_9_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r2); const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](4); const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](10); return ctx.calculateResults(ctx.itemCost, _r0.value, _r1.value); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "option", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Select quantity");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -411,12 +413,12 @@ class SearchComponent {
     }
 }
 SearchComponent.ɵfac = function SearchComponent_Factory(t) { return new (t || SearchComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_data_data_service__WEBPACK_IMPORTED_MODULE_1__["DataService"])); };
-SearchComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SearchComponent, selectors: [["search-cmp"]], outputs: { selectItemEvent: "selectItemEvent" }, decls: 7, vars: 1, consts: [["id", "search", "name", "search", "type", "search", "autoFocus", "true", 1, "search", 3, "input"], ["srch_input", ""], ["id", "selectResults", 1, "selectResults", 3, "input"], ["selectedItem", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SearchComponent_Template(rf, ctx) { if (rf & 1) {
+SearchComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: SearchComponent, selectors: [["search-cmp"]], outputs: { selectItemEvent: "selectItemEvent" }, decls: 7, vars: 1, consts: [["id", "search", "name", "search", "type", "search", "autoFocus", "true", "value", "5000", 1, "search", 3, "input", "focus"], ["srch_input", ""], ["id", "selectResults", 1, "selectResults", 3, "input"], ["selectedItem", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SearchComponent_Template(rf, ctx) { if (rf & 1) {
         const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "label");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Search Products ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "input", 0, 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("input", function SearchComponent_Template_input_input_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7); const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3); return ctx.triggerSearch(_r3.value); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("input", function SearchComponent_Template_input_input_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7); const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3); return ctx.triggerSearch(_r3.value); })("focus", function SearchComponent_Template_input_focus_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7); const _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3); return ctx.triggerSearch(_r3.value); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "select", 2, 3);
