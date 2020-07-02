@@ -17,6 +17,8 @@ export class AppComponent {
   constructor() {
     this.decoMeth = 'SP';
     this.qty = 12;
+    this.itemCost = 1.95;
+    this.calculateResults(this.itemCost,this.decoMeth,this.qty);
   }
 
   calculateResults(cost: number, deco: string = 'SP', qty: number = 12) {

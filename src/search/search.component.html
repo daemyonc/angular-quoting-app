@@ -6,8 +6,10 @@
     class="search"
     type="search"
     autoFocus="true"
+    value="5000"
     #srch_input
     (input)="triggerSearch(srch_input.value)"
+    (focus)="triggerSearch(srch_input.value)"
   />
 </label>
 
