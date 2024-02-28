@@ -109,6 +109,6 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-quoting-app"
+    }
+  }
 }
