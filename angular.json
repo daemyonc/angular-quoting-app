@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-quoting-app:build"
+            "buildTarget": "angular-quoting-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-quoting-app:build:production"
+              "buildTarget": "angular-quoting-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-quoting-app:build"
+            "buildTarget": "angular-quoting-app:build"
           }
         },
         "test": {
